@@ -4,7 +4,7 @@ const taskTextArea = document.querySelector('input[type = "text"]');
 let taskNumber = 0;
 let list = document.body.querySelector(".list");
 let storedList = window.localStorage.getItem("taskList");
-if (storedList != null) list.innerHTML += storedList;
+storedList ? (list.innerHTML += storedList) : null;
 
 // Update storage
 const updateStorage = () => {
